@@ -7,12 +7,12 @@
     <br>
     <div class="col-md-6-col-md-offset-3">
         <strong>Original Url:</strong>
-        Original Url
+        {{$url->original}}
     </div>
     <br>
     <div class="col-md-6-col-md-offset-3">
         <strong>New Short Url:</strong>
-        New Short Url
+        <a href="{{$url->original}}" target="_blank">{{$url->short}}</a>
     </div>
     <br>
     <div class="col-md-6-col-md-offset-3">

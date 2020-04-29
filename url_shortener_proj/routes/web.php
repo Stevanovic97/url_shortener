@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/details', function () {
-    return view('details');
-})->name('details');
+
+Route::post('/urls', 'UrlController@store')->name('url.store');
+Route::get('/urls', 'UrlController@index')->name('urls.index');
+Route::get('/urls/{urls}', 'UrlController@details')->name('urls.details');
