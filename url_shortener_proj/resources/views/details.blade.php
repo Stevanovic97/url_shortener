@@ -11,18 +11,18 @@
     </div>
     <br>
     <div class="col-md-6-col-md-offset-3">
-        <strong>New Short Url:</strong>
+        <strong>Generated Short Url:</strong>
         <a href="{{$url->original}}" target="_blank">{{$url->short}}</a>
     </div>
     <br>
     <div class="col-md-6-col-md-offset-3">
         <strong>All View Count:</strong>
-        All View Count
+        {{$url->all_views}}
     </div>
     <br>
     <div class="col-md-6-col-md-offset-3">
         <strong>Unique View Count:</strong>
-        Unique View Count
+        {{$url->unique_views}}
     </div>
 </div>
 </body>

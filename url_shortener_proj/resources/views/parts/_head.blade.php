@@ -39,7 +39,7 @@
 <body>
 <div class="links">
     <a href="{{route('home')}}">Home</a>
-    <a href="https://github.com/Stevanovic97/url_shortener">GitHub</a>
+    <a href="https://github.com/Stevanovic97/url_shortener" target="_blank">GitHub</a>
 </div>
 <div class="col-md-6 col-md-offset-3" style="text-align: center">
     <h1>Url Shortener</h1>
