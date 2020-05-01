@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Url extends Model
 {
-    protected $fillable = ['original', 'all_views'];
+    protected $fillable = ['original', 'short'];
 }

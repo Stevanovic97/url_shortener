@@ -17,8 +17,8 @@ class CreateUrlsTable extends Migration
             $table->id();
             $table->string('original');
             $table->string('short');
-            $table->integer('all_views')->unsigned();
-            $table->integer('unique_views')->unsigned();
+            $table->integer('all_views')->unsigned()->default(0);
+            $table->integer('unique_views')->unsigned()->default(0);
             $table->timestamps();
         });
     }

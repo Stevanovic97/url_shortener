@@ -11,14 +11,11 @@ class UrlController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, ['original' => 'required|url']);
-        $url = new Url;
-        $url->original = $request->original;
-        $url->short = Str::random(7);
-        $url->all_views = 0;
-        $url->unique_views = 0;
-        $url->save();
+        $url = Url::create([
+            'original' => $request->original,
+            'short' => Str::random(7)
+        ]);
         return redirect()->route('urls.details', $url);
-        //  return view('details', compact('url'));
     }
 
     public function details($id)
