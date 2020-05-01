@@ -7,12 +7,12 @@
     <br>
     <div class="col-md-6-col-md-offset-3">
         <strong>Original Url:</strong>
-        {{$url->original}}
+        <a href="{{$url->original}}">{{$url->original}}</a>
     </div>
     <br>
     <div class="col-md-6-col-md-offset-3">
         <strong>Generated Short Url:</strong>
-        <a href="{{$url->original}}" target="_blank">{{$url->short}}</a>
+        <a href="{{route('urls.all', $url)}}" target="_blank">{{$url->short}}</a>
     </div>
     <br>
     <div class="col-md-6-col-md-offset-3">

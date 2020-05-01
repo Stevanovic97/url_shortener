@@ -146,7 +146,12 @@
       <workItem from="1587844278225" duration="3594000" />
       <workItem from="1588018723133" duration="18000" />
       <workItem from="1588185246073" duration="4445000" />
-      <workItem from="1588217934428" duration="1126000" />
+      <workItem from="1588217934428" duration="7807000" />
+      <workItem from="1588298957801" duration="50000" />
+      <workItem from="1588299736737" duration="48000" />
+      <workItem from="1588299801744" duration="1174000" />
+      <workItem from="1588314990702" duration="631000" />
+      <workItem from="1588315816758" duration="445000" />
     </task>
     <servers />
   </component>
@@ -154,17 +159,17 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588217935460">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588315816797">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588217935460" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588315816797" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1587844591189">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587844591189" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588218248135">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588274022586">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588218248135" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588274022586" />
   </component>
 </project>

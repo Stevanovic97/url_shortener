@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,11 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
 
 Route::post('/urls', 'UrlController@store')->name('url.store');
-Route::get('/urls', 'UrlController@index')->name('urls.index');
 Route::get('/urls/{urls}', 'UrlController@details')->name('urls.details');
+Route::get('/{urls}', 'UrlController@all')->name('urls.all');
+
+
+
+
