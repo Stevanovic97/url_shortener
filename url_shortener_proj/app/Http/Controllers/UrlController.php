@@ -21,55 +21,26 @@ class UrlController extends Controller
             'original' => $request->original,
             'short' => Str::random(7)
         ]);
-        return redirect()->route('urls.details', $url);
+        $short = $url->short;
+        return redirect()->route('urls.details', $short);
     }
 
-    public function details($id)
+    public function details($short)
     {
-        $url = Url::find($id);
+        $urls = Url::all();
+        foreach ($urls as $u) {
+            if ($u->short == $short)
+                $url = $u;
+        }
         return view('details', compact('url'));
     }
 
-    public function views(Request $request, $id)
+    public function all($id)
     {
         $url = Url::find($id);
-
-        $visitors = Visitor::all();
-        if ($visitors->isEmpty()) {
-            $visitor = Visitor::create([
-                'ip_address' => $request->ip(),
-                'url' => $url->short
-            ]);
-            $url->unique_views++;
-        }
-//        foreach ($visitors as $visitor) {
-//            if ($request->ip() == $visitor->ip_address) {
-//                $v = DB::table('visitors')->where('ip_address', $visitor->ip_address)->get();
-//            }
-//        }
-//        dd($v[0]->url);
-//        if ($v[0]->url != $url->short) {
-//            $visitor = Visitor::create([
-//                'ip_address' => $request->ip(),
-//                'url' => $url->short
-//            ]);
-//            $url->unique_views++;
-//        }
-
         $url->all_views++;
         $url->save();
         return redirect($url->original);
     }
-
-
-//    public function all($id)
-//    {
-//        $url = Url::find($id);
-//        $url->all_views++;
-//        $url->save();
-//        return redirect($url->original);
-////        $all_views = $url->all_views;
-////        return json_encode(compact('all_views'));
-//    }
 
 }
