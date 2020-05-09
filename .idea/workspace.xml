@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d5fedf71-bcc0-4b4d-8afe-3b68dc748c78" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/url_shortener_proj/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/composer" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/url_shortener_proj/vendor/league/commonmark" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1b2xl1ApWEZD64OmkFOoUvAAR2v" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5fedf71-bcc0-4b4d-8afe-3b68dc748c78" name="Default Changelist" comment="" />
+      <created>1587844137462</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587844137462</updated>
+      <workItem from="1587844143418" duration="22000" />
+      <workItem from="1587844186854" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1587844141831">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1587844141831" />
+  </component>
+</project>

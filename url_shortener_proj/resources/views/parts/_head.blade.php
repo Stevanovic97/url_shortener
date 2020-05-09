@@ -6,6 +6,9 @@
 
     <title>Url Shortener @yield('title')</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -40,6 +43,7 @@
 <div class="links">
     <a href="{{route('home')}}">Home</a>
     <a href="https://github.com/Stevanovic97/url_shortener" target="_blank">GitHub</a>
+
 </div>
 <div class="col-md-6 col-md-offset-3" style="text-align: center">
     <h1>Url Shortener</h1>
