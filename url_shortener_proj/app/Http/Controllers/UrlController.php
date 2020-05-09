@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Str;
 use App\Visitor;
 use Hash;
+use Session;
 
 
 class UrlController extends Controller
@@ -22,6 +23,9 @@ class UrlController extends Controller
             'short' => Str::random(7)
         ]);
         $short = $url->short;
+
+        Session::flash('success', 'The short URL was generated successfully!');
+
         return redirect()->route('urls.details', $short);
     }
 
@@ -32,6 +36,7 @@ class UrlController extends Controller
             if ($u->short == $short)
                 $url = $u;
         }
+
         return view('details', compact('url'));
     }
 
