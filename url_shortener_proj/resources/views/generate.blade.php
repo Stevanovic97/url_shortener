@@ -3,15 +3,6 @@
 @section('content')
     <div class="col-md-6 col-md-offset-3" style="text-align: center">
         <br>
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{$error}}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
         <form action="{{route('url.store')}}" method="post">
             {{csrf_field()}}
             <label for="original">Original Url:</label>

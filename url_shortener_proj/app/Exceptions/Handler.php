@@ -2,8 +2,13 @@
 
 namespace App\Exceptions;
 
+use ErrorException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use phpDocumentor\Reflection\Types\Parent_;
+use Psy\Exception\FatalErrorException;
+use Symfony\Component\CssSelector\Exception\InternalErrorException;
 use Throwable;
+use CustomException;
 
 class Handler extends ExceptionHandler
 {
@@ -50,6 +55,12 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        if ($this->isHttpException($exception)) {
+            if (view()->exists('errors.' . $exception->getStatusCode())) {
+                return response()->view('errors.' . $exception->getStatusCode(), [], $exception->getStatusCode());
+            }
+        }
         return parent::render($request, $exception);
     }
+
 }
