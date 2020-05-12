@@ -3,10 +3,13 @@
 namespace App\Exceptions;
 
 use ErrorException;
+use HttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use phpDocumentor\Reflection\Types\Parent_;
 use Psy\Exception\FatalErrorException;
 use Symfony\Component\CssSelector\Exception\InternalErrorException;
+use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
+use Symfony\Component\Routing\Exception\MethodNotAllowedException;
 use Throwable;
 use CustomException;
 
@@ -55,10 +58,8 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
-        if ($this->isHttpException($exception)) {
-            if (view()->exists('errors.' . $exception->getStatusCode())) {
-                return response()->view('errors.' . $exception->getStatusCode(), [], $exception->getStatusCode());
-            }
+        if ($exception instanceof HttpException) {
+            abort(404);
         }
         return parent::render($request, $exception);
     }

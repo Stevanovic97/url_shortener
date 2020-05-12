@@ -38,7 +38,7 @@ class UrlController extends Controller
         }
 
         if (!isset($url)) {
-            return view('errors.' . '500');
+            abort(404);
         }
 
         return view('details', compact('url'));
