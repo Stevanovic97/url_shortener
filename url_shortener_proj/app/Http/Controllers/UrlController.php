@@ -31,12 +31,7 @@ class UrlController extends Controller
 
     public function details($short)
     {
-        $urls = Url::all();
-        foreach ($urls as $u) {
-            if ($u->short == $short)
-                $url = $u;
-        }
-
+        $url = Url::whereShort($short)->first();
         if (!isset($url)) {
             abort(404);
         }
