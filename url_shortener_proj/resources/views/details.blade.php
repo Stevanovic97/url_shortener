@@ -10,7 +10,7 @@
         <br>
         <div class="col-md-6-col-md-offset-3">
             <strong>Generated Short Url:</strong>
-            <a href="{{route('urls.all', $url)}}" target="_blank">{{$url->short}}</a>
+            <a href="{{route('urls.all', $url)}}" target="_blank">https://{{$url->short}}</a>
 
         </div>
         <br>

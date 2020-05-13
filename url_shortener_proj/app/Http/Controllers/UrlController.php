@@ -26,6 +26,7 @@ class UrlController extends Controller
 
         Session::flash('success', 'The short URL was generated successfully!');
 
+
         return redirect()->route('urls.details', $short);
     }
 
