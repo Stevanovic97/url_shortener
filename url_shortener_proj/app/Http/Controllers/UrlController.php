@@ -36,7 +36,9 @@ class UrlController extends Controller
             abort(404);
         }
 
-        return view('details')->withUrl($url);
+        $myurl = route('urls.details', $short);
+
+        return view('details')->withUrl($url)->withMyurl($myurl);
     }
 //
 //    public function all($id)

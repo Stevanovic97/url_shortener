@@ -12,7 +12,7 @@
         <div class="col-md-6-col-md-offset-3">
             <strong>Generated Short Url:</strong>
 
-            <a href="{{$url->original}}" target="_blank">{{$url->short}}</a>
+            <a href="{{$url->original}}" target="_blank">{{$myurl}}</a>
 
         </div>
         <br>
