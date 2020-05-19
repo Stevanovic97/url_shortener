@@ -14,39 +14,45 @@ class UrlController extends Controller
 {
     public function store(Request $request)
     {
-        $request->validate([
+        $this->validate($request, [
             'original' => 'required|url'
         ]);
+
+        $short = Str::random(4);
+        $detail = Str::random(5);
+
+        while (Url::where('short', '=', $short)->first() != null) {
+            $short = Str::random(4);
+        }
+        while (Url::where('detail', '=', $detail)->first() != null) {
+            $detail = Str::random(5);
+        }
         $url = Url::create([
             'original' => $request->original,
-            'short' => Str::random(5)
+            'short' => $short,
+            'detail' => $detail
         ]);
-        $short = $url->short;
-
 
         Session::flash('success', 'The short URL was generated successfully!');
 
-        return redirect()->route('urls.details', compact('short'));
+        return redirect()->route('urls.details', compact('detail'));
     }
 
-    public function details($short)
+    public function details($detail)
     {
-        $url = Url::whereShort($short)->first();
+        $url = Url::whereDetail($detail)->first();
         if (!isset($url)) {
             abort(404);
         }
-
-        $myurl = route('urls.details', $short);
-
-        return view('details')->withUrl($url)->withMyurl($myurl);
+        return view('details')->withUrl($url);
     }
-//
-//    public function all($id)
-//    {
-//        $url = Url::find($id);
-//        $url->all_views++;
-//        $url->save();
-//        return redirect($url->original);
-//    }
+
+    public function views($id)
+    {
+        $url = Url::find($id);
+        $url->all_views++;
+        $url->save();
+        return redirect($url->original);
+    }
 
 }
