@@ -15,7 +15,7 @@ class CreateVisitorsTable extends Migration
     {
         Schema::create('visitors', function (Blueprint $table) {
             $table->id();
-            $table->string('ip_address');
+            $table->string('cookie');
             $table->string('url');
             $table->timestamps();
         });
