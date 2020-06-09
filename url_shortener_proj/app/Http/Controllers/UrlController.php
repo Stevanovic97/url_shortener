@@ -43,16 +43,12 @@ class UrlController extends Controller
             abort(404);
         }
 
-        $guestCookie = Cookie::has('guest') ? Cookie::get('guest') : Cookie::queue('guest', rand() . rand(), 1000000);
-
-        return view('details')->withUrl($url)->withGusetcookie($guestCookie);
+        return view('details')->withUrl($url);
     }
 
-
-    public function views($id, Request $request)
+    public function views($short, Request $request)
     {
-        $url = Url::find($id);
-        $url = $this->urlValidate($request, $url);
+        $url = Url::whereShort($short)->first();
         $cookie = $this->cookieValidate($request);
 
         $visitor = Visitor::where([['cookie', '=', $cookie], ['url', '=', $url->short]]);
@@ -70,26 +66,16 @@ class UrlController extends Controller
         return redirect($url->original);
     }
 
-    public function urlValidate(Request $request, $url)
-    {
-        if (!isset($url)) {
-            $short = substr($request->getRequestUri(), 1, strlen($request->getRequestUri()) - 1);
-            $urlcheck = Url::whereShort($short)->first();
-            if ($urlcheck != null) {
-                return $urlcheck;
-            } else {
-                abort(404);
-            }
-        }
-        return $url;
-    }
-
-    public function cookieValidate(Request $request)
+    private function cookieValidate(Request $request)
     {
         $cookie = $request->cookie('guest');
 
+        $cookieExpMinutes = 1000000;
+        $cookieVal = rand() . rand();
+
         if (!isset($cookie)) {
-            $cookie = Cookie::queue('guest', rand() . rand(), 1000000);
+            Cookie::queue('guest', $cookieVal, $cookieExpMinutes);
+            return $cookieVal;
         }
 
         return $cookie;
