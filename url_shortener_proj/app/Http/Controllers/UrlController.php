@@ -49,6 +49,9 @@ class UrlController extends Controller
     public function views($short, Request $request)
     {
         $url = Url::whereShort($short)->first();
+        if ($url == null) {
+            abort(404);
+        }
         $cookie = $this->cookieValidate($request);
 
         $visitor = Visitor::where([['cookie', '=', $cookie], ['url', '=', $url->short]]);
