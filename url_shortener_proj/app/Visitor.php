@@ -4,8 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Visitor extends Model
 {
-    protected $fillable = ['ip_address', 'url'];
+    protected $fillable = ['cookie', 'url'];
 
+    public function urls()
+    {
+        return $this->belongsToMany(Url::class);
+    }
 }
