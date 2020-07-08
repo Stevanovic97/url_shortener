@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendMail;
 use App\Url;
 use Illuminate\Http\Request;
 use Str;
@@ -9,6 +10,7 @@ use App\Visitor;
 use Hash;
 use Session;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Mail;
 
 
 class UrlController extends Controller
@@ -16,16 +18,16 @@ class UrlController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'original' => 'required|url'
+            'original' => 'required|url',
+            'email' => 'nullable|email'
         ]);
 
-        do {
-            $short = Str::random(4);
-        } while (Url::where('short', '=', $short)->first() != null);
+        $short = $this->generateShort();
+        $detail = $this->generateDetail();
 
-        do {
-            $detail = Str::random(5);
-        } while (Url::where('detail', '=', $detail)->first() != null);
+        if (isset($request->email)) {
+            Mail::to($request->email)->send(new SendMail($short, $detail));
+        }
 
         $url = Url::create(['original' => $request->original,
             'short' => $short,
@@ -54,15 +56,7 @@ class UrlController extends Controller
         }
         $cookie = $this->cookieValidate($request);
 
-        $visitor = Visitor::where([['cookie', '=', $cookie], ['url', '=', $url->short]]);
-
-        if (!($visitor->exists())) {
-            $visitor = Visitor::create([
-                'url' => $url->short,
-                'cookie' => $cookie
-            ]);
-            $url->unique_views++;
-        }
+        $this->visitorCheckMake($cookie, $url);
 
         $url->all_views++;
         $url->save();
@@ -82,5 +76,36 @@ class UrlController extends Controller
         }
 
         return $cookie;
+    }
+
+    private function generateShort()
+    {
+        do {
+            $short = Str::random(4);
+        } while (Url::where('short', '=', $short)->first() != null);
+
+        return $short;
+    }
+
+    private function generateDetail()
+    {
+        do {
+            $detail = Str::random(5);
+        } while (Url::where('detail', '=', $detail)->first() != null);
+
+        return $detail;
+    }
+
+    private function visitorCheckMake($cookie, $url)
+    {
+        $visitor = Visitor::where([['cookie', '=', $cookie], ['url', '=', $url->short]]);
+
+        if (!($visitor->exists())) {
+            $visitor = Visitor::create([
+                'url' => $url->short,
+                'cookie' => $cookie
+            ]);
+            $url->unique_views++;
+        }
     }
 }
